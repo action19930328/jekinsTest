@@ -11,8 +11,14 @@ pipeline {
       }
     }
     stage('') {
+      agent {
+        docker {
+          image 'maven:3.3.3'
+        }
+        
+      }
       steps {
-        mail(subject: 'test', body: 'hello test', from: '997332992@qq.com', to: 'kaisheng.an@renren-inc.com')
+        sh 'sh \'mvn --version\''
       }
     }
   }
