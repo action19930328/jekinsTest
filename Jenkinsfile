@@ -12,7 +12,7 @@ pipeline {
     }
     stage('') {
       steps {
-        timestamps()
+        mail(subject: 'test', body: 'hello test', from: '997332992@qq.com', to: 'kaisheng.an@renren-inc.com')
       }
     }
   }
