@@ -11,14 +11,9 @@ pipeline {
       }
     }
     stage('') {
-      agent {
-        docker {
-          image 'maven:3.3.3'
-        }
-        
-      }
       steps {
-        sh 'sh \'mvn --version\''
+        sh '''a=`ls -la`
+echo $a'''
       }
     }
   }
